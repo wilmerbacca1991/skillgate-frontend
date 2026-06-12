@@ -165,5 +165,5 @@ Safety and quality controls:
 ## 15) Portfolio Positioning
 To maximize hiring impact:
 - Show architecture decisions in README diagrams.
-- Add demo accounts and guided demo script.
+- Add sample accounts and a guided validation checklist.
 - Include measurable quality indicators (test coverage, Lighthouse score, API latency budget).

@@ -13,8 +13,22 @@ export default function TabLayout() {
     <Tabs
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
+        tabBarInactiveTintColor: 'rgba(148,163,184,0.9)',
         headerShown: false,
         tabBarButton: HapticTab,
+        tabBarStyle: {
+          backgroundColor: 'rgba(8,16,31,0.95)',
+          borderTopColor: 'rgba(148,163,184,0.22)',
+          borderTopWidth: 1,
+          height: 74,
+          paddingTop: 8,
+          paddingBottom: 10,
+        },
+        tabBarLabelStyle: {
+          fontSize: 11,
+          fontWeight: '700',
+          letterSpacing: 0.3,
+        },
       }}>
       <Tabs.Screen
         name="index"
