@@ -2,6 +2,10 @@
 
 Frontend monorepo for SkillGate web and mobile clients.
 
+## Status
+
+This frontend is still a work in progress. Some UX flows are incomplete and known bugs are still present while active development continues.
+
 ## Apps
 
 - apps/web: React + Vite recruiter/candidate web app
