@@ -1,16 +1,58 @@
-# React + Vite
+# SkillGate Web App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React + Vite web client for recruiter and candidate workflows.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Role-based login and protected routes
+- Recruiter dashboard for challenges, assessments, candidates, and interviews
+- Candidate portal for timed assessments and attempt review
+- Live interview room access
+- Interview and notification data integration
 
-## React Compiler
+## Local Setup
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. Install deps:
 
-## Expanding the ESLint configuration
+```powershell
+npm install
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+2. Configure env in apps/web/.env:
+
+```env
+VITE_API_BASE_URL=http://localhost:5000
+VITE_SOCKET_URL=http://localhost:5000
+```
+
+3. Start dev server:
+
+```powershell
+npm run dev
+```
+
+4. Open app:
+
+- http://localhost:5173
+
+## Production URL
+
+- https://skillgate-web.onrender.com/
+
+## Scripts
+
+- npm run dev
+- npm run build
+- npm run preview
+- npm run lint
+
+## Auth Session Behavior
+
+- Session is persisted in localStorage under skillgate.web.session.
+- On app bootstrap, token validity is checked and profile is revalidated.
+- Failed refresh or invalid session clears state and redirects to login.
+
+## Troubleshooting
+
+- If you see 401 repeatedly, clear localStorage session and log in again.
+- If network calls fail, verify backend is running and VITE_API_BASE_URL is correct.
